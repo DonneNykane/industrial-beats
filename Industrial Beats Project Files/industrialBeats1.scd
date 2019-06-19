@@ -79,7 +79,10 @@ SynthDef("hiHats",
 //
 // Feedback of certain operators (lone operators or those at the top of a modulation chain) is controlled by the cursor's x axis position.
 // The amount of pitch envelope applied to all operators os controlled by the cursor's y axis position.
-
+//
+// "rel" arguments define the release/decay times of the amplitude envelopes.
+// "ratio" arguments define what ratio the operators should relate to the base frequency by (e.g. ratioA = 2 means that odd numbered operators will have a frequency of 2 * freq
+// "mod" arguments define the strength of the phase modulation by modifying the amplitude of the modulating operators
 
 SynthDef("Algorithm1",		// Op1 --> Op2
 	{arg freq = 82.41, fback = 0, ampA = 0.5, ampB = 0.5, relA = 1, relB = 1, ratioA = 0.5, ratioB = 1, modA = 1, modB = 1, pitchAmp = 1;		// arguments accepted by the synth
